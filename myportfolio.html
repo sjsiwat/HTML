@@ -19,7 +19,8 @@
            ตั้งค่าทั้งเว็บไซต์
         ========================== */
         body {
-            background-color: rgb(242, 227, 204);
+            background-color: rgba(182, 182, 179, 0.878);
+            opacity: 0.9;
             font-family: 'Yuyu', sans-serif;
             font-size: 18px;
         }
@@ -29,67 +30,112 @@
         ========================== */
         #myName {
             width: fit-content;
+            color: rgb(26, 207, 213);
+            font-size: 50px;
             margin: 0 auto;
-            padding: 10px;
-
-            background-color: white;
-
-            border: 5px dashed black;
+            padding: 15px;
+            background-color: rgb(204, 202, 202);
+            border: 10px dashed rgb(251, 44, 44);
         }
-
+        /* =========================
+           กล่องข้อความในเวป
+        ========================== */
+        .box-dotted-about-me {
+            border: 7px dotted rgb(232, 35, 88);
+            padding: 15px;
+            width: fit-content;
+            max-width: fit-content;
+            margin: 20px auto;
+            background-color: rgb(247, 205, 205);
+        }
         /* =========================
            กล่องข้อความในเวป
         ========================== */
         .box-radius-red {
-            border: 2px solid rgb(207, 76, 76);
+            border: 2px solid rgb(232, 35, 88);
             border-radius: 25px;
-
             padding: 15px;
-
             width: fit-content;
             max-width: fit-content;
-
             margin: 20px auto;
-
             background-color: rgb(247, 205, 205);
         }
         /* =========================
            กล่องข้อความในเวป
         ========================== */
         .box-radius-blue {
-            border: 2px solid rgb(100, 100, 208);
+            border: 2px solid rgb(57, 236, 113);
             border-radius: 25px;
-
             padding: 15px;
-
             width: fit-content;
             max-width: fit-content;
-
             margin: 20px auto;
-
             background-color: rgb(171, 192, 245);
         }
         /* =========================
            กล่องข้อความในเวป
         ========================== */
         .box-radius-green {
-            border: 2px solid rgb(41, 162, 97);
+            border: 2px solid rgb(209, 136, 248);
             border-radius: 25px;
-
             padding: 15px;
-
             width: fit-content;
             max-width: fit-content;
-
             margin: 20px auto;
-
             background-color: rgb(177, 241, 205);
         }
+        /* =========================
+           กล่องข้อความในเวป
+        ========================== */
+        .box-radius-light-blue {
+            border: 2px solid rgb(240, 157, 55);
+            border-radius: 25px;
+            padding: 15px;
+            width: fit-content;
+            max-width: fit-content;
+            margin: 20px auto;
+            background-color: rgb(149, 209, 246);
+        }
+        /* =========================
+           กล่องข้อความในเวป
+        ========================== */
+        .box-radius-light-pink {
+            border: 2px solid #ea5939;
+            border-radius: 25px;
+            padding: 15px;
+            width: fit-content;
+            max-width: fit-content;
+            margin: 20px auto;
+            background-color: rgb(251, 177, 245);
+        }
+        .info-box {
+            display: flex;
+            justify-content: space-between;
+            algin-items: flex-start;
+            margin: 20px auto;
+            font-size: 25px;
+        }
+
+        .myphoto {
+            width: 300px;
+            height: 300px;
+            margin: 20px auto;
+            border: groove 10px rgb(28, 47, 118);
+        }
     </style>
+
+<!-- สคริปเด้งข้อความเตือนตอนเข้าเว็ป Js 2อันในไฟล์ อีกอันคือเล่นเพลง อยู่ล่างสุดก่อนปิด tag body-->    
+<script>
+    window.onload = function() {
+        alert("ยินดีต้อนรับนักล่ามังกร");
+    };
+</script>
+
 
 </head>
 
 <body>
+
 
     <!-- จัดข้อความทั้งหมดให้อยู่ตรงกลาง -->
     <div style="text-align:center;">
@@ -98,36 +144,35 @@
         <h1 id="myName">Siwat Jankam</h1>
 
         <!-- ตำแหน่ง -->
-        <h3>JSD#13 Student</h3>
+        <h2 style="background-color: #ea5939; font-size: 35px;"><em> JSD#13 Student  </em></h2>
 
         <!-- รูปภาพ -->
-        <img src="" alt="My photo" width="200" height="200">
+        <img src="profilePic.jpeg" alt="My photo" class="myphoto">
 
-        <!-- About -->
-        <h2>About me</h2>
+        
+        <div class="box-dotted-about-me"> <!-- About -->
+        <h2 style="color: blueviolet;"><strong> About me</strong> </h2>
 
         <!-- กล่อง About 1 -->
-        <div class="box-radius-red">
-            <p>
-                My name is Siwat Jankam. I am 22 years old.
-                I am a student at Chiangmai Rajabhat University.
-                I am studying Information Technology.
+        
+            <p style="font-size: 35px; color:#ea5939">
+                My name is Siwat Jankam. I am 32 years old.
+                I am a student on junior software developper at Generation Thailand.<br>
+                I was graduated from Chiang Mai Rajhabphat University with a bachelor's degree in business marketing.<br>
                 I am interested in web development and programming.
                 I enjoy exploring new technologies and building projects.
             </p>
-        </div>
-
-        <!-- กล่อง About 2 -->
-        <div class="box-radius-blue">
-            <p>
+            <p style="font-size: 30px; color:rgb(100, 100, 208)">
                 I am a motivated and enthusiastic individual who is always eager
                 to learn and grow. I enjoy teamwork and solving problems.
-                My goal is to become a professional software developer.
+                <br> My goal is to become a professional software developer.
             </p>
         </div>
 
+        <div class="info-box">
+        <div class="box-radius-blue">    
         <!-- Education -->
-        <h3>Education</h3>
+        <h3> Education </h3>
 
         <ul>
             <li>Montfort College Primary School</li>
@@ -135,8 +180,12 @@
             <li>Chiang Mai University</li>
             <li>Chiang Mai Rajabhat University</li>
         </ul>
+        </div>
+
 
         <!-- Skills -->
+
+         <div class="box-radius-green">
         <h3>Skills</h3>
 
         <ul>
@@ -145,8 +194,11 @@
             <li>Excel</li>
             <li>Excel - Basic Data Cleaning</li>
         </ul>
+         </div>
+
 
         <!-- Goals -->
+         <div class="box-radius-red">
         <h3>My Learning Goals</h3>
 
         <ul>
@@ -158,8 +210,10 @@
             <li>Learn Cloud Architecture</li>
             <li>Learn Design System</li>
         </ul>
+        </div>
 
         <!-- Hobby -->
+         <div class="box-radius-light-blue">
         <h3>My Top 3 Hobbies</h3>
 
         <ul>
@@ -167,27 +221,43 @@
             <li>Cycling with my friends</li>
             <li>Playing with my cat</li>
         </ul>
+        </div>
+        </div>  <!--ปิดกล่อง info.box -->
+
+
 
         <!-- Contact -->
-        <h2>Contact Me</h2>
+         <div class="box-radius-light-pink">
+        <h2 style="font-size: 30px; color:rgb(207, 76, 76)">Contact Me</h2>
 
         <a href="https://www.facebook.com/siwat.jankam" target="_blank">
             Facebook
         </a>
 
-        |
-
         <a href="https://www.instagram.com/siwat_jankam/" target="_blank">
             Instagram
-        </a>
-
-        |
+        </a>      |
 
         <a href="mailto:sj.siwat@gmail.com">
             Email
         </a>
-
+        
     </div>
+
+<!-- เล่นเพลงเองในพื้นหลัง -->
+
+<audio id="bg-music" loop>
+    <source src="fusrodah.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const music = document.getElementById("bg-music");
+
+document.addEventListener("click", () => {
+    music.play();
+}, { once: true });
+</script>
+
 
 </body>
 
