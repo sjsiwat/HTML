@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Siwat Jankam — Full-Stack Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#141414;
+    --body:#3a4048;
+    --muted:#5c626b;
+    --faint:#8b9098;
+    --rule:#dcdfe3;
+    --chip:#f5f6f8;
+    --accent:#8a0f0f;
+    --org:#0f6157;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    font-family:"Poppins","Helvetica Neue",Arial,sans-serif;
+    font-weight:400;
+    color:var(--ink);
+    font-size:8.4pt;
+    line-height:1.4;
+    background:#e9eaec;
+    -webkit-font-smoothing:antialiased;
+  }
+  .page{
+    width:210mm;
+    min-height:297mm;
+    margin:16px auto;
+    padding:11mm 13mm;
+    background:#fff;
+    box-shadow:0 2px 12px rgba(0,0,0,.15);
+  }
+
+  /* ---------- header ---------- */
+  header{border-bottom:2px solid var(--accent);padding-bottom:7px;margin-bottom:9px}
+  h1{margin:0;font-size:20pt;font-weight:600;letter-spacing:1.2px;line-height:1.1}
+  .role{margin:3px 0 5px;font-size:9.6pt;color:var(--accent);font-weight:500;letter-spacing:.3px}
+  .contact{font-size:7.7pt;color:var(--muted);font-weight:400;white-space:nowrap}
+  .contact a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--rule);white-space:nowrap}
+  .sep{margin:0 5px;color:var(--rule)}
+
+  /* ---------- sections ---------- */
+  section{margin-top:9px}
+  h2{
+    margin:0 0 6px;
+    font-size:8.4pt;
+    font-weight:600;
+    letter-spacing:1.8px;
+    text-transform:uppercase;
+    color:var(--accent);
+    border-bottom:1px solid var(--rule);
+    padding-bottom:3px;
+  }
+  p{margin:0}
+  .summary{text-align:justify;font-weight:400;color:var(--body)}
+
+  /* ---------- skills ---------- */
+  .skill-row{display:flex;align-items:flex-start;gap:10px;padding:2.5px 0}
+  .skill-row + .skill-row{border-top:1px solid #eef0f2}
+  .skill-row .label{
+    flex:0 0 74px;
+    font-size:7.8pt;
+    font-weight:600;
+    letter-spacing:.7px;
+    text-transform:uppercase;
+    color:var(--faint);
+    padding-top:2px;
+  }
+  .chips{display:flex;flex-wrap:wrap;gap:3px}
+  .chip{
+    border:1px solid var(--rule);
+    background:var(--chip);
+    border-radius:3px;
+    padding:1px 6px;
+    font-size:7.9pt;
+    font-weight:400;
+    white-space:nowrap;
+  }
+
+  /* ---------- entries ---------- */
+  .entry{margin-bottom:7px}
+  .entry:last-child{margin-bottom:0}
+  .line{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+  .title{font-weight:600}
+  .org{color:var(--org);font-weight:400}
+  .meta{color:var(--faint);font-size:7.9pt;font-weight:400;white-space:nowrap;letter-spacing:.2px}
+  ul{margin:3px 0 0;padding-left:14px}
+  li{margin-bottom:1.5px;font-weight:400;color:var(--body)}
+  li::marker{color:var(--accent)}
+  b,strong{font-weight:600;color:var(--ink)}
+
+  /* ---------- earlier experience ---------- */
+  .earlier{display:grid;grid-template-columns:1fr 1fr;gap:0 22px}
+  .earlier .item{padding:3px 0}
+  .earlier .item + .item{border-top:1px solid #eef0f2}
+  .earlier .role-line{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+  .earlier .who{font-weight:500}
+  .earlier .desc{color:var(--body);font-weight:400;font-size:8.1pt}
+  .earlier.two-up{grid-template-columns:1fr;gap:0}
+
+  /* ---------- footer info ---------- */
+  .info{display:flex;gap:10px;padding:2.5px 0}
+  .info + .info{border-top:1px solid #eef0f2}
+  .info .label{
+    flex:0 0 86px;font-size:7.8pt;font-weight:600;letter-spacing:.7px;
+    text-transform:uppercase;color:var(--faint);white-space:nowrap
+  }
+  .info span:last-child{font-weight:400;color:var(--body)}
+
+  @media print{
+    @page{size:A4;margin:0}
+    body{background:#fff}
+    .page{width:auto;min-height:0;margin:0;padding:11mm 13mm;box-shadow:none}
+    a{color:inherit}
+    .chip{background:var(--chip)!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <h1>SIWAT JANKAM</h1>
+    <div class="role">Full-Stack Developer — Node.js / Express / React</div>
+    <div class="contact">
+      Chiang Mai, Thailand<span class="sep">|</span>
+      <a href="mailto:sj.siwat@gmail.com">sj.siwat@gmail.com</a><span class="sep">|</span>
+      091-067-7177<span class="sep">|</span>
+      <a href="https://siwat.me" target="_blank">siwat.me</a><span class="sep">|</span>
+      <a href="https://github.com/sjsiwat" target="_blank">github.com/sjsiwat</a><span class="sep">|</span>
+      <a href="https://www.linkedin.com/in/siwat-jankam-s99/" target="_blank">linkedin.com/in/siwat-jankam-s99</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>Professional Summary</h2>
+    <p class="summary">Full-stack developer trained on the MERN stack through Generation Thailand (JSD13). Design and front-end craft — layout, typography, interface detail — is work I care about, but the depth of my experience sits on the backend: designing REST APIs in Node.js and Express, modelling data across PostgreSQL and MongoDB, and owning authentication, access control, and deployment rather than treating infrastructure as someone else's problem. Every project in my portfolio runs in production and was shipped by me, from database schema through API layer to deployment on Cloudflare, AWS, Render, and Vercel. I am looking for a team where I can own features end to end and keep learning from more experienced engineers.</p>
+  </section>
+
+  <section>
+    <h2>Technical Skills</h2>
+    <div class="skill-row">
+      <div class="label">Backend</div>
+      <div class="chips">
+        <span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">REST API design</span>
+        <span class="chip">Magic-link auth</span><span class="chip">Row Level Security</span>
+      </div>
+    </div>
+    <div class="skill-row">
+      <div class="label">Frontend</div>
+      <div class="chips">
+        <span class="chip">React</span><span class="chip">JavaScript (ES6+)</span><span class="chip">HTML5</span>
+        <span class="chip">CSS3</span><span class="chip">PWA</span><span class="chip">Optimistic UI</span>
+      </div>
+    </div>
+    <div class="skill-row">
+      <div class="label">Data</div>
+      <div class="chips">
+        <span class="chip">PostgreSQL</span><span class="chip">Supabase</span><span class="chip">MongoDB Atlas</span>
+        <span class="chip">Cloudflare D1</span><span class="chip">DynamoDB</span><span class="chip">SQL</span>
+      </div>
+    </div>
+    <div class="skill-row">
+      <div class="label">Cloud</div>
+      <div class="chips">
+        <span class="chip">Cloudflare Pages</span><span class="chip">Workers</span><span class="chip">AWS S3</span>
+        <span class="chip">CloudFront</span><span class="chip">Lambda</span><span class="chip">API Gateway</span>
+        <span class="chip">Render</span><span class="chip">Vercel</span>
+      </div>
+    </div>
+    <div class="skill-row">
+      <div class="label">Tooling</div>
+      <div class="chips">
+        <span class="chip">Git &amp; GitHub</span><span class="chip">LINE Messaging API</span><span class="chip">Docker</span>
+        <span class="chip">n8n</span><span class="chip">Google APIs</span><span class="chip">Gemini</span>
+      </div>
+    </div>
+    <div class="skill-row">
+      <div class="label">Practices</div>
+      <div class="chips">
+        <span class="chip">Git branching workflow</span><span class="chip">CI auto-deploy</span>
+        <span class="chip">Production debugging</span><span class="chip">Technical documentation</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+
+    <div class="entry">
+      <div class="line">
+        <span><span class="title">Full-Stack Developer</span> <span class="org">— Independent Projects</span></span>
+        <span class="meta">Chiang Mai · Apr 2026 – Present</span>
+      </div>
+      <ul>
+        <li>Shipped <b>JohnyMemo</b> (johny.siwat.me), a privacy-first productivity PWA — magic-link auth and Row Level Security isolate user data at the database layer, not just in application logic.</li>
+        <li>Built realtime sync with optimistic UI updates and undo-delete, keeping the app responsive on unreliable connections.</li>
+        <li>Rebuilt a serverless <b>visitor-counter API</b> on Cloudflare Workers + D1, migrating off AWS Lambda + DynamoDB to cut cost and operational overhead.</li>
+        <li>Deployed <b>siwat.me</b> on AWS S3 + CloudFront + ACM, later moved to Cloudflare Pages with GitHub-triggered auto-deploy.</li>
+        <li>Built <b>MDflow</b>, a PDF-to-Markdown pipeline (n8n, Docker, Google Drive API, Gemini); bypassed a broken library node by calling the Drive API v3 directly over OAuth.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="line">
+        <span><span class="title">Full-Stack Web Development Program (JSD13)</span> <span class="org">— Generation Thailand</span></span>
+        <span class="meta">Jun 2026 – Oct 2026</span>
+      </div>
+      <ul>
+        <li>Intensive MERN-stack program covering JavaScript, React, Node.js, Express, SQL and MongoDB through practical assignments and team projects.</li>
+        <li>Built an Express REST API over two separate data layers — PostgreSQL via Supabase and MongoDB Atlas — deployed to Render with the client on Cloudflare Pages.</li>
+        <li>Served as <b>Tech Lead (backend)</b> on the final group project — owned API design and deployment, and unblocked the team on production-breaking issues such as a malformed MongoDB URI and a wrong API base URL.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="line">
+        <span><span class="title">Senior Sales Supervisor</span> <span class="org">— Drive Car Rental</span></span>
+        <span class="meta">Chiang Mai, Thailand · 2021 – 2026</span>
+      </div>
+      <ul>
+        <li>Led the branch to a <b>Top 3 revenue ranking company-wide in 2025</b>, owning sales targets, daily operations and team coaching.</li>
+        <li>Raised service ratings into the <b>Top 3 among Chiang Mai car rental operators</b> on both Google Reviews and Rentalcars.com by standardising service touchpoints and following up on every complaint.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Earlier Experience</h2>
+    <div class="earlier">
+      <div class="item">
+        <div class="role-line">
+          <span class="who">Guest Relation Officer <span class="org">— The New Concept</span></span>
+          <span class="meta">2019 – 2021</span>
+        </div>
+        <div class="desc">VIP guest experience and cross-department coordination.</div>
+      </div>
+      <div class="item">
+        <div class="role-line">
+          <span class="who">Guest Service Agent <span class="org">— I-River Chiang Mai</span></span>
+          <span class="meta">2017 – 2019</span>
+        </div>
+        <div class="desc">Reservations, check-in/out and customer issue resolution.</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <div class="line">
+      <span><span class="title">Chiang Mai Rajabhat University</span> <span class="org">— Bachelor of Business Administration (Marketing)</span></span>
+      <span class="meta">Graduated 2016</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Languages &amp; Professional Interests</h2>
+    <div class="info">
+      <span class="label">Languages</span>
+      <span>Thai (Native) · English (Working Proficiency — technical documentation and written communication)</span>
+    </div>
+    <div class="info">
+      <span class="label">Interests</span>
+      <span>Backend architecture and API design · Web design and UI systems · Cloud infrastructure and cost optimisation · Workflow automation · Application security and data privacy</span>
+    </div>
+    <div class="info">
+      <span class="label">Beyond Work</span>
+      <span>Specialty coffee brewing · Road cycling and weekend fun runs — the same steady pacing I bring to shipping software</span>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>
